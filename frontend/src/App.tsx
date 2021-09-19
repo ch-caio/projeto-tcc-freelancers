@@ -1,4 +1,5 @@
 import DataTable from "components/DataTable";
+import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 import SliderHome from "components/SliderHome";
 
@@ -12,7 +13,7 @@ function App() {
       <div className="container">
         <DataTable />
       </div>
-
+      <Footer />
 
 
     </>
