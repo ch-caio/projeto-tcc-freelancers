@@ -1,8 +1,21 @@
+import DataTable from "components/DataTable";
+import NavBar from "components/NavBar";
+import SliderHome from "components/SliderHome";
+
+
+
 function App() {
   return (
-    <div>
-      <h1>Ola mundo</h1>
-    </div>
+    <>
+      <NavBar />
+      <SliderHome />
+      <div className="container">
+        <DataTable />
+      </div>
+
+
+
+    </>
   );
 }
 

@@ -1,0 +1,13 @@
+.gradelinks ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.gradelinks {
+    margin-top: 50px;
+    width: 50%;
+    float: right;
+    }
+
+
