@@ -1,6 +1,5 @@
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
-import 'pages/Sobre/style.css'
 import imagem from 'assets/img/sobrenos.png';
 
 const Sobre = () => {
