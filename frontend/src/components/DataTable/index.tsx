@@ -1,4 +1,16 @@
+import axios from "axios";
+import { useEffect } from "react";
+import { BASE_URL } from "utils/requests";
+
 const DataTable = () => {
+
+    useEffect(() => {
+        axios.get(`${BASE_URL}/usuarios`)
+            .then(Response => {
+                setPage(Response.data);
+            })
+    })
+
     return (
         <>
 
@@ -6,31 +18,22 @@ const DataTable = () => {
                 <table className="table table-striped table-sm">
                     <thead>
                         <tr>
-                            <th>Prestador</th>
-                            <th>Area</th>
-                            <th>Função</th>
-                            <th>Telefone</th>
+                            <th>Nome</th>
                             <th>Email</th>
+                            <th>Descrição</th>
+                            <th>Area</th>
+
                         </tr>
                     </thead>
                     <tbody>
-
-                        <tr>
-                            <td>Caio Hneirque</td>
-                            <td>Desenvolvedor</td>
-                            <td>back-end</td>
-                            <td>(11) 9 1234 1234</td>
-                            <td>caio@caio.com.br</td>
-                        </tr>
-
-                        <tr>
-                            <td>teste</td>
-                            <td>Desenvolvedor</td>
-                            <td>back-end</td>
-                            <td>(11) 9 1234 1234</td>
-                            <td>teste@teste.com.br</td>
-                        </tr>
-
+                        {page.content?.map(item => (
+                            <tr>
+                                <td>{item.name}</td>
+                                <td>{item.email}</td>
+                                <td>{item.descricao}</td>
+                                <td>{item.area}</td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>

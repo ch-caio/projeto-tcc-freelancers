@@ -1,11 +1,14 @@
 package com.projetotcc.tcc.service;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.projetotcc.tcc.dto.ProcuraDTO;
 import com.projetotcc.tcc.entities.Procura;
 import com.projetotcc.tcc.repositories.ProcuraRepository;
 
@@ -24,8 +27,12 @@ public class ProcuraService {
 	}
 
 	@Transactional(readOnly = true)
-	public List<Procura> findAll() {
-		return procuraRepository.findAll();
+	public Page<ProcuraDTO> findAll(Pageable pageable) {
+		procuraRepository.findAll();
+		Page<Procura> resultado = procuraRepository.findAll(pageable);
+		return resultado.map(x -> new ProcuraDTO());
 	}
 
 }
+
+
