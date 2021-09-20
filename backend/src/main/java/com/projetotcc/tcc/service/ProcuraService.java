@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.projetotcc.tcc.dto.ProcuraDTO;
 import com.projetotcc.tcc.entities.Procura;
 import com.projetotcc.tcc.repositories.ProcuraRepository;
@@ -26,9 +27,9 @@ public class ProcuraService {
 		procuraRepository.deleteById(id);
 	}
 
-	@Transactional(readOnly = true)
+	@JsonIgnore
+	@Transactional()
 	public Page<ProcuraDTO> findAll(Pageable pageable) {
-		procuraRepository.findAll();
 		Page<Procura> resultado = procuraRepository.findAll(pageable);
 		return resultado.map(x -> new ProcuraDTO(x));
 	}

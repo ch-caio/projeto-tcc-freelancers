@@ -2,6 +2,7 @@ package com.projetotcc.tcc.dto;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.projetotcc.tcc.entities.Procura;
 
 public class ProcuraDTO implements Serializable {
@@ -19,11 +20,12 @@ public class ProcuraDTO implements Serializable {
 		this.area = area;
 	}
 	
+	@JsonIgnore
 	public ProcuraDTO(Procura procura) {
-		this.id = procura.getId();
-		this.descricao = procura.getDescricao();
-		this.email = procura.getEmail();
-		this.area = procura.getArea();
+		id = procura.getId();
+		descricao = procura.getDescricao();
+		email = procura.getEmail();
+		area = procura.getArea();
 	}
 
 	public Long getId() {

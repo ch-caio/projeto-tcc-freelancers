@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.projetotcc.tcc.dto.UsuarioDTO;
 import com.projetotcc.tcc.entities.Usuario;
 import com.projetotcc.tcc.repositories.UsuarioRepository;
@@ -24,11 +25,10 @@ public class UsuarioService {
 		usuarioRepository.deleteById(id);
 	}
 
+	@JsonIgnore()
 	@Transactional(readOnly = true)
 	public Page<UsuarioDTO> findAll(Pageable pageable) {
-		usuarioRepository.findAll();
 		Page<Usuario> result = usuarioRepository.findAll(pageable);
-		return result
-				.map(x -> new UsuarioDTO(x));
+		return result.map(x -> new UsuarioDTO(x));
 	}
 }

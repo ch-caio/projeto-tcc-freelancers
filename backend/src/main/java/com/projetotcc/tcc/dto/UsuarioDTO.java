@@ -2,6 +2,7 @@ package com.projetotcc.tcc.dto;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.projetotcc.tcc.entities.Usuario;
 
 public class UsuarioDTO implements Serializable {
@@ -21,12 +22,13 @@ public class UsuarioDTO implements Serializable {
 		this.area = area;
 	}
 	
+	@JsonIgnore
 	public UsuarioDTO(Usuario usuario) {
-		this.id = usuario.getId();
-		this.nome = usuario.getNome();
-		this.email = usuario.getEmail();
-		this.descricao = usuario.getDescricao();
-		this.area = usuario.getArea();
+		id = usuario.getId();
+		nome = usuario.getNome();
+		email = usuario.getEmail();
+		descricao = usuario.getDescricao();
+		area = usuario.getArea();
 	}
 
 	public Long getId() {

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.projetotcc.tcc.dto.UsuarioDTO;
 import com.projetotcc.tcc.entities.Usuario;
 import com.projetotcc.tcc.service.UsuarioService;
@@ -26,6 +27,7 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService service;
 
+	@JsonIgnore
 	@GetMapping()
 	public ResponseEntity<Page<UsuarioDTO>> findAll(Pageable pageable) {
 		Page<UsuarioDTO> lista = service.findAll(pageable);
