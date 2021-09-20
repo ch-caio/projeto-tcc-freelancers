@@ -1,35 +1,34 @@
 package com.projetotcc.tcc.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_servicos")
-public class Servico {
+@Table(name = "tb_procuras")
+public class Procura {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String descricao;
+	private String email;
+	private String area;
 
-	@ManyToOne
-	@JoinColumn(name = "usuario_id")
-	private Usuario usuario;
-
-	public Servico() {
-
+	public Procura() {
 	}
 
-	public Servico(Long id, String descricao, Usuario usuario) {
-		super();
+	public Procura(Long id, String descricao, String email, String area) {
 		this.id = id;
 		this.descricao = descricao;
-		this.usuario = usuario;
+		this.email = email;
+		this.area = area;
 	}
 
 	public Long getId() {
@@ -48,12 +47,19 @@ public class Servico {
 		this.descricao = descricao;
 	}
 
-	public Usuario getUsuario() {
-		return usuario;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
 }

@@ -4,27 +4,26 @@ import java.io.Serializable;
 
 import com.projetotcc.tcc.entities.Usuario;
 
-public class UsuarioDTO implements Serializable{
+public class UsuarioDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long id;
 	private String nome;
 	private String email;
-	
-	public UsuarioDTO () {
-		
+	private String descricao;
+	private String area;
+
+	public UsuarioDTO() {
+
 	}
 
-	public UsuarioDTO(Long id, String nome, String email) {
+	public UsuarioDTO(Long id, String nome, String email, String descricao, String area) {
+		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
-	}
-	
-	public UsuarioDTO(Usuario usuario) {
-		this.id = usuario.getId();
-		this.nome = usuario.getNome();
-		this.email = usuario.getEmail();
+		this.descricao = descricao;
+		this.area = area;
 	}
 
 	public Long getId() {
@@ -50,6 +49,21 @@ public class UsuarioDTO implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
 	
 }

@@ -14,29 +14,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.projetotcc.tcc.dto.UsuarioDTO;
-import com.projetotcc.tcc.entities.Usuario;
-import com.projetotcc.tcc.service.UsuarioService;
+import com.projetotcc.tcc.entities.Procura;
+import com.projetotcc.tcc.service.ProcuraService;
 
 @RestController
-@RequestMapping(value = "/usuarios")
-public class UsuarioController {
+@RequestMapping(value = "/procuras")
+public class ProcuraController {
 
 	@Autowired
-	private UsuarioService service;
+	private ProcuraService service;
 
 	@GetMapping()
-	public ResponseEntity<List<Usuario>> findAll() {
-		List<Usuario> list = service.findAll();
+	public ResponseEntity<List<Procura>> findAll() {
+		List<Procura> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 
 	@PostMapping
-	public ResponseEntity<Usuario> insert(@RequestBody Usuario usuario) {
-		usuario = service.insert(usuario);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(usuario.getId())
+	public ResponseEntity<Procura> insert(@RequestBody Procura procura) {
+		procura = service.insert(procura);
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(procura.getId())
 				.toUri();
-		return ResponseEntity.created(uri).body(usuario);
+		return ResponseEntity.created(uri).body(procura);
 	}
 
 	@DeleteMapping(value = "/{id}")

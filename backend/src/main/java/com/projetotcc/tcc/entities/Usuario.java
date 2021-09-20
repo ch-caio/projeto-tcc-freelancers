@@ -19,18 +19,19 @@ public class Usuario {
 	private Long id;
 	private String nome;
 	private String email;
-
-	@OneToMany(mappedBy = "usuario")
-	private List<Servico> servicos = new ArrayList<>();
+	private String descricao;
+	private String area;
 	
 	public Usuario() {
-
 	}
 
-	public Usuario(Long id, String nome, String email) {
+	public Usuario(Long id, String nome, String email, String descricao, String area) {
+		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
+		this.descricao = descricao;
+		this.area = area;
 	}
 
 	public Long getId() {
@@ -57,8 +58,20 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public List<Servico> getServicos() {
-		return servicos;
+	public String getDescricao() {
+		return descricao;
 	}
 
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
 }
+
