@@ -1,4 +1,4 @@
-import slide1 from 'assets/img/slide2.png';
+import slide1 from 'assets/img/sobrenos.png';
 import "components/SliderHome/style.css"
 
 const SliderHome = () => {

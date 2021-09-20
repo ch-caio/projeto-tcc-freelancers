@@ -1,12 +1,14 @@
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
+import 'pages/Sobre/style.css'
+import imagem from 'assets/img/sobrenos.png';
 
 const Sobre = () => {
     return (
         <>
             <NavBar />
-            <div className="container">
-                <h1>SOBRE</h1>
+            <div className="container" >
+                <h1>sobre</h1>
             </div>
             <Footer />
         </>
