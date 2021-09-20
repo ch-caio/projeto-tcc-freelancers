@@ -8,20 +8,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projetotcc.tcc.dto.PrestadorDTO;
-import com.projetotcc.tcc.service.PrestadorService;
+import com.projetotcc.tcc.dto.UsuarioDTO;
+import com.projetotcc.tcc.service.UsuarioService;
 
 @RestController
-@RequestMapping(value="/prestadores")
-public class PrestadorController {
+@RequestMapping(value = "/usuarios")
+public class UsuarioController {
 
 	@Autowired
-	private PrestadorService prestadorService;
+	private UsuarioService service;
 	
 	@GetMapping
-	public ResponseEntity<List<PrestadorDTO>> findAll () {
-		List<PrestadorDTO> lista = prestadorService.findAll();
+	public ResponseEntity<List<UsuarioDTO>> findAll () {
+		List<UsuarioDTO> lista = service.findAll();
 		return ResponseEntity.ok(lista);
-		
 	}
 }
