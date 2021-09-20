@@ -27,5 +27,13 @@ public class UsuarioService {
 		List<Usuario> resultado = usuarioRepository.findAll();
 		return resultado.stream().map(x -> new UsuarioDTO(x)).collect(Collectors.toList());
 	}
+	
+	public Usuario insert(Usuario usuario) { 
+		return usuarioRepository.save(usuario);
+	}
+
+	public void delete(Long id) {
+		usuarioRepository.deleteById(id);
+	}
 
 }
