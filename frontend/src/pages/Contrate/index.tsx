@@ -1,4 +1,5 @@
-import DataTable from "components/DataTable";
+import DataTableUsuario from "components/DataTableUsuario";
+import DataTable from "components/DataTableUsuario";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 
@@ -7,7 +8,7 @@ const Contrate = () => {
         <>
             <NavBar />
             <div className="container">
-                <DataTable />
+                <DataTableUsuario />
             </div>
             <Footer />
         </>

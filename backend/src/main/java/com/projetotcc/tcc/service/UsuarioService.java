@@ -28,6 +28,7 @@ public class UsuarioService {
 	public Page<UsuarioDTO> findAll(Pageable pageable) {
 		usuarioRepository.findAll();
 		Page<Usuario> result = usuarioRepository.findAll(pageable);
-		return result.map(x -> new UsuarioDTO());
+		return result
+				.map(x -> new UsuarioDTO(x));
 	}
 }

@@ -30,7 +30,7 @@ public class ProcuraService {
 	public Page<ProcuraDTO> findAll(Pageable pageable) {
 		procuraRepository.findAll();
 		Page<Procura> resultado = procuraRepository.findAll(pageable);
-		return resultado.map(x -> new ProcuraDTO());
+		return resultado.map(x -> new ProcuraDTO(x));
 	}
 
 }

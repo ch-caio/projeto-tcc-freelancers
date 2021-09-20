@@ -1,4 +1,4 @@
-import DataTable from "components/DataTable";
+import DataTable from "components/DataTableUsuario";
 import Footer from "components/Footer";
 import Grid from "components/Grid";
 import NavBar from "components/NavBar";

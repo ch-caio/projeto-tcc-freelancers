@@ -1,3 +1,4 @@
+import DataTableProcura from "components/DataTableProcura";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 
@@ -6,7 +7,7 @@ const Publique = () => {
         <>
             <NavBar />
             <div className="container">
-                <h1>Publique</h1>
+                <DataTableProcura />
             </div>
             <Footer />
         </>

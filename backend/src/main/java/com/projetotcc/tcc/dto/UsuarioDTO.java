@@ -13,17 +13,20 @@ public class UsuarioDTO implements Serializable {
 	private String descricao;
 	private String area;
 
-	public UsuarioDTO() {
-
-	}
-
 	public UsuarioDTO(Long id, String nome, String email, String descricao, String area) {
-		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.descricao = descricao;
 		this.area = area;
+	}
+	
+	public UsuarioDTO(Usuario usuario) {
+		this.id = usuario.getId();
+		this.nome = usuario.getNome();
+		this.email = usuario.getEmail();
+		this.descricao = usuario.getDescricao();
+		this.area = usuario.getArea();
 	}
 
 	public Long getId() {
