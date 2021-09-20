@@ -22,5 +22,6 @@ public class PrestadorController {
 	public ResponseEntity<List<PrestadorDTO>> findAll () {
 		List<PrestadorDTO> lista = prestadorService.findAll();
 		return ResponseEntity.ok(lista);
+		
 	}
 }
