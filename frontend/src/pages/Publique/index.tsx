@@ -1,7 +1,14 @@
+import Footer from "components/Footer";
+import NavBar from "components/NavBar";
+
 const Publique = () => {
     return (
         <>
-            <h1>PUBLIQUE</h1>
+            <NavBar />
+            <div className="container">
+                <h1>Publique</h1>
+            </div>
+            <Footer />
         </>
     );
 }

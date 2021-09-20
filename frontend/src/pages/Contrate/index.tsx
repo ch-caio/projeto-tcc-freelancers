@@ -1,20 +1,16 @@
-import DataTable from "components/DataTable";
 import Footer from "components/Footer";
-import Grid from "components/Grid";
 import NavBar from "components/NavBar";
-import SliderHome from "components/SliderHome";
 
-const Home = () => {
+const Contrate = () => {
     return (
         <>
             <NavBar />
-            <SliderHome />
             <div className="container">
-                <Grid />
+                <h1>Contrate</h1>
             </div>
             <Footer />
         </>
     );
 }
 
-export default Home;
+export default Contrate;

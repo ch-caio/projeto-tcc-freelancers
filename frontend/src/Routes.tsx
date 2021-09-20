@@ -1,3 +1,4 @@
+import Contrate from 'pages/Contrate';
 import Home from 'pages/Home';
 import Publique from 'pages/Publique';
 import Sobre from 'pages/Sobre';
@@ -15,6 +16,9 @@ const Routes = () => {
                 </Route>
                 <Route path="/sobre" >
                     <Sobre />
+                </Route>
+                <Route path="/contrate" >
+                    <Contrate />
                 </Route>
             </Switch>
 
