@@ -18,11 +18,10 @@ const DataTable = () => {
             .then(response => {
                 setPage(response.data);
             })
-    })
+    }, [])
 
     return (
         <>
-
             <div className="table-responsive">
                 <table className="table table-striped table-sm">
                     <thead>
@@ -30,7 +29,6 @@ const DataTable = () => {
                             <th>Descrição</th>
                             <th>Email</th>
                             <th>Area</th>
-
                         </tr>
                     </thead>
                     <tbody>
@@ -47,5 +45,4 @@ const DataTable = () => {
         </>
     );
 }
-
 export default DataTable;

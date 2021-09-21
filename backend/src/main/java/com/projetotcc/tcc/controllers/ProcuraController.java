@@ -1,9 +1,12 @@
 package com.projetotcc.tcc.controllers;
 
 import java.net.URI;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -29,9 +32,20 @@ public class ProcuraController {
 
 	@JsonIgnore
 	@GetMapping()
-	public ResponseEntity<Page<ProcuraDTO>> findAll(Pageable pageable ) {
-		Page<ProcuraDTO> list = service.findAll(pageable);
-		return ResponseEntity.ok(list);
+	public Page<ProcuraDTO> findAll(Pageable pageable) {
+		Page<Procura> pageProcuras = service.findAll(pageable);
+		List<ProcuraDTO> procuras = this.toCollectionProcuraDTO(pageProcuras.getContent());
+		return new PageImpl<ProcuraDTO>(procuras, pageable, pageProcuras.getTotalElements());
+	}
+
+	private List<ProcuraDTO> toCollectionProcuraDTO(List<Procura> procuras) {
+		return procuras.stream()
+				.map(this::toModelProcuraDTO)
+				.collect(Collectors.toList());
+	}
+	
+	private ProcuraDTO toModelProcuraDTO(Procura procura) {
+		return new ProcuraDTO(procura);
 	}
 
 	@PostMapping
@@ -47,6 +61,5 @@ public class ProcuraController {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
-
 }
 

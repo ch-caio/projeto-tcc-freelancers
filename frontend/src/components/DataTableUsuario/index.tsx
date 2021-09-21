@@ -15,10 +15,10 @@ const DataTable = () => {
 
     useEffect(() => {
         axios.get(`${BASE_URL}/usuarios`)
-            .then(response => {
-                setPage(response.data);
+            .then(showResponse => {
+                setPage(showResponse.data);
             })
-    })
+    }, [])
 
     return (
         <>

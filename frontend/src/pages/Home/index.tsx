@@ -1,4 +1,4 @@
-import AdicionarProcura from "components/AdicionarProcura/intex";
+import AdicionarProcura from "components/AdicionarProcura";
 import AdicionarUsuario from "components/AdicionarUsuario";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
