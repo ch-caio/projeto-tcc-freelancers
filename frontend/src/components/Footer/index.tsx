@@ -8,7 +8,7 @@ const Footer = () => {
                     <Link className="nav-item" to="/"><li className="nav-item"><a className="nav-link px-2 text-muted">Home</a></li></Link>
                     <Link className="nav-item" to="/contrate"><li className="nav-item"><a className="nav-link px-2 text-muted">Contrate</a></li></Link>
                     <Link className="nav-item" to="/publique"><li className="nav-item"><a className="nav-link px-2 text-muted">Publique seus serviços</a></li></Link>
-                    <Link className="nav-item" to="/sobre"><li className="nav-item"><a className="nav-link px-2 text-muted">Sobre nos</a></li></Link>
+                    <Link className="nav-item" to="/login"><li className="nav-item"><a className="nav-link px-2 text-muted">Login</a></li></Link>
                 </ul>
                 <p className="text-center text-muted">©Freelancers</p>
             </footer>

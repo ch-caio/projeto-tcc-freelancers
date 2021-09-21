@@ -15,8 +15,8 @@ const DataTable = () => {
 
     useEffect(() => {
         axios.get(`${BASE_URL}/procuras?pag=0&size=20`)
-            .then(Response => {
-                setPage(Response.data);
+            .then(response => {
+                setPage(response.data);
             })
     })
 

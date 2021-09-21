@@ -1,4 +1,4 @@
-import slide1 from 'assets/img/slide2.png';
+
 
 const Grid = () => {
     return (

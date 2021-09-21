@@ -14,9 +14,9 @@ const DataTable = () => {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/usuarios?pag=0&size=20`)
-            .then(Response => {
-                setPage(Response.data);
+        axios.get(`${BASE_URL}/usuarios`)
+            .then(response => {
+                setPage(response.data);
             })
     })
 

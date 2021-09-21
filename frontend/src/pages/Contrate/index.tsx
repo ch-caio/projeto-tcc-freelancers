@@ -1,5 +1,4 @@
 import DataTableUsuario from "components/DataTableUsuario";
-import DataTable from "components/DataTableUsuario";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 
