@@ -35,7 +35,7 @@ const AdicionarUsuario = () => {
                     <input type="text" className="form-control" id="validationCustom03" required onChange={(event) => setDescricao(event.target.value)} />
                 </div>
                 <div className="col-md-6">
-                    <label htmlFor="validationCustom03" className="form-label">Area</label>
+                    <label htmlFor="validationCustom03" className="form-label">Palavra chave</label>
                     <input type="text" className="form-control" id="validationCustom03" required onChange={(event) => setArea(event.target.value)} />
                 </div>
                 <div className="col-12">

@@ -1,15 +1,16 @@
 import Footer from "components/Footer";
-import Loginn from "components/Loginn";
 import NavBar from "components/NavBar";
+import SobreNos from "components/SobreNos";
 
-const Login = () => {
+
+const TelaSobreNos = () => {
     return (
         <>
             <NavBar />
-            <Loginn />
+            <SobreNos />
             <Footer />
         </>
     );
 }
 
-export default Login;
+export default TelaSobreNos;

@@ -1,7 +1,7 @@
 import Contrate from 'pages/Contrate';
 import Home from 'pages/Home';
-import Login from 'pages/Login';
 import Publique from 'pages/Publique';
+import SobreNos from 'pages/PaginaSobreNos';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 const Routes = () => {
@@ -17,8 +17,8 @@ const Routes = () => {
                 <Route path="/contrate" >
                     <Contrate />
                 </Route>
-                <Route path="/login" >
-                    <Login />
+                <Route path="/sobre-nos" >
+                    <SobreNos />
                 </Route>
             </Switch>
 

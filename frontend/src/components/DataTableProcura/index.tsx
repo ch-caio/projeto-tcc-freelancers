@@ -29,6 +29,7 @@ const DataTable = () => {
                             <th>Descrição</th>
                             <th>Email</th>
                             <th>Area</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,6 +38,7 @@ const DataTable = () => {
                                 <td>{item.descricao}</td>
                                 <td>{item.email}</td>
                                 <td>{item.area}</td>
+                                <td>Aberto</td>
                             </tr>
                         ))}
                     </tbody>

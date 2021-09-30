@@ -1,0 +1,30 @@
+.imagemBackGround img {
+    width: 100%; 
+    height: 600px;
+    position: relative;
+}
+
+.texto {
+    position: absolute;
+    top: 350px;
+    text-align: center;
+    left: 47%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.texto ul li {
+    list-style:none;
+}
+
+.texto p {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #FFFAFA;
+}
+
+.texto h1 {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    color: #363636;
+}

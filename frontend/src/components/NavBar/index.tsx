@@ -15,10 +15,10 @@ const NavBar = () => {
                         <span className="nav-link px-2 text-muted">Contrate</span></li></Link>
 
                     <Link className="nav-item" to="/publique"><li className="nav-item">
-                        <span className="nav-link px-2 text-muted">Publique seus serviços</span></li></Link>
+                        <span className="nav-link px-2 text-muted">Pedidos de serviço</span></li></Link>
 
-                    <Link className="nav-item" to="/login"><li className="nav-item">
-                        <span className="nav-link px-2 text-muted">Login</span></li></Link>
+                    <Link className="nav-item" to="/sobre-nos"><li className="nav-item">
+                        <span className="nav-link px-2 text-muted">Sobre nós</span></li></Link>
                 </ul>
             </div>
         </div>
