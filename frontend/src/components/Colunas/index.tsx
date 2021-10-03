@@ -13,10 +13,10 @@ const Colunas = () => {
 
             <div className="coluna direita" >
                 <h2>
-                    Publique o seu perfil
+                    Procurando por profissionais?
                 </h2>
                 <p>
-                    Descreva o seu perfil com sua principais informações, formações, conhecimentos e deixa que contratantes pesquise seu perfil.
+                    Existe diversos profissionais qualificados disponivel em nosso site, procure por algum que preencha seus requisitos!
                 </p>
                 <Link className="btn" to="/contrate">
                     <button >acessar!</button>

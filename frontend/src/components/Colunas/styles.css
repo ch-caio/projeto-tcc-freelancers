@@ -1,5 +1,6 @@
 .row:after {
 display: table;
+border: 0px;
 clear: both;
 }
 
@@ -7,6 +8,7 @@ clear: both;
 float: left;
 width: 50%;
 height: 600px;
+padding: 0px;
 }
 
 .row img{
@@ -16,15 +18,17 @@ height: 600px;
 }
 
 .direita {
-    background-color: rgb(198, 225, 250);
+    background-color: rgb(220, 235, 240);
 }
 
 .direita h2 {
+    padding-left: 20px;
     padding-top: 20px;
     font-size: 40px;
 }
 
 .direita p {
+    padding-left: 20px;
     padding-top: 3px;
     font-size: 20px;
 }

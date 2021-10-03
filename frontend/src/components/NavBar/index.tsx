@@ -11,11 +11,11 @@ const NavBar = () => {
                     <Link className="nav-item" to="/"><li className="nav-item">
                         <span className="nav-link px-2 text-muted">Home</span></li></Link>
 
-                    <Link className="nav-item" to="/contrate"><li className="nav-item">
-                        <span className="nav-link px-2 text-muted">Contrate</span></li></Link>
+                    <Link className="nav-item" to="/lista-vagas"><li className="nav-item">
+                        <span className="nav-link px-2 text-muted">Publique seu cadastro</span></li></Link>
 
-                    <Link className="nav-item" to="/publique"><li className="nav-item">
-                        <span className="nav-link px-2 text-muted">Pedidos de serviço</span></li></Link>
+                    <Link className="nav-item" to="/lista-anuncios"><li className="nav-item">
+                        <span className="nav-link px-2 text-muted">Publique sua vaga</span></li></Link>
 
                     <Link className="nav-item" to="/sobre-nos"><li className="nav-item">
                         <span className="nav-link px-2 text-muted">Sobre nós</span></li></Link>
