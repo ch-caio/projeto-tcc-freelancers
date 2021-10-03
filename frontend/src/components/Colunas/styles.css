@@ -1,0 +1,40 @@
+.row:after {
+display: table;
+clear: both;
+}
+
+.coluna {
+float: left;
+width: 50%;
+height: 600px;
+}
+
+.row img{
+    vertical-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.direita {
+    background-color: rgb(198, 225, 250);
+}
+
+.direita h2 {
+    padding-top: 20px;
+    font-size: 40px;
+}
+
+.direita p {
+    padding-top: 3px;
+    font-size: 20px;
+}
+
+.direita button {
+    padding-top: 1px;
+    font-size: 15px;
+}
+
+
+
+
+
