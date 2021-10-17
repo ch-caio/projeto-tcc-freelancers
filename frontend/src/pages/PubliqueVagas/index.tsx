@@ -4,13 +4,9 @@ import NavBar from "components/NavBar";
 
 const ListaVagas = () => {
     return (
-        <>
-            <NavBar />
-            <div className="container">
-                <AdicionarProcura />
-            </div>
-            <Footer />
-        </>
+        <div className="container">
+            <AdicionarProcura />
+        </div>
     );
 }
 

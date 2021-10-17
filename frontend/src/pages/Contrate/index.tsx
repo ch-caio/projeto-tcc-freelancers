@@ -4,13 +4,9 @@ import NavBar from "components/NavBar";
 
 const Contrate = () => {
     return (
-        <>
-            <NavBar />
-            <div className="container">
-                <DataTableUsuario />
-            </div>
-            <Footer />
-        </>
+        <div className="container">
+            <DataTableUsuario />
+        </div>
     );
 }
 

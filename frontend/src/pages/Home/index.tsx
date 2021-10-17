@@ -7,13 +7,9 @@ import SliderHome from "components/SliderHome";
 
 const Home = () => {
     return (
-        <>
-            <NavBar />
-            <SliderHome />
-            <Colunas />
-            <Colunas2 />
-            <Footer />
-        </>
+        <SliderHome />
+        <Colunas />
+        <Colunas2 />
     );
 }
 

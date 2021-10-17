@@ -5,11 +5,7 @@ import SobreNos from "components/SobreNos";
 
 const TelaSobreNos = () => {
     return (
-        <>
-            <NavBar />
-            <SobreNos />
-            <Footer />
-        </>
+        <SobreNos />
     );
 }
 

@@ -5,13 +5,9 @@ import NavBar from "components/NavBar";
 
 const ListaAnuncios = () => {
     return (
-        <>
-            <NavBar />
-            <div className="container">
-                <AdicionarUsuario />
-            </div>
-            <Footer />
-        </>
+        <div className="container">
+            <AdicionarUsuario />
+        </div>
     );
 }
 
