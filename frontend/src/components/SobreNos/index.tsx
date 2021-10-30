@@ -1,4 +1,4 @@
-import imgBackground from 'assets/img/aboutus.png';
+import imgBackground from 'assets/img/imghome.png';
 import "components/SobreNos/style.css"
 
 const SobreNos = () => {

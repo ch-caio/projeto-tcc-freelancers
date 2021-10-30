@@ -19,7 +19,7 @@ const Colunas = () => {
                     Existe diversos profissionais qualificados disponivel em nosso site, procure por algum que preencha seus requisitos!
                 </p>
                 <Link className="btn" to="/contrate">
-                    <button >acessar!</button>
+                    <button >Pesquise!</button>
                 </Link>
             </div>
         </div >

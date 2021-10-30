@@ -17,6 +17,8 @@ const AdicionarUsuario = () => {
                 console.log(res);
                 console.log(res.data);
             })
+
+        alert('Formulário Enviado. Obrigado!')
     }
 
     return (
