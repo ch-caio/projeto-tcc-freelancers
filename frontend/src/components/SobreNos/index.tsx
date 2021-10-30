@@ -33,7 +33,6 @@ const SobreNos = () => {
                             </p></li>
                         </ol>
                     </li>
-
                 </ul>
             </div>
 

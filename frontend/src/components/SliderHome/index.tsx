@@ -6,7 +6,6 @@ const SliderHome = () => {
         <div className="imagem">
             <img src={slide1} className="img-fluid" alt="imagemFreelancers"></img>
         </div>
-
     );
 }
 
