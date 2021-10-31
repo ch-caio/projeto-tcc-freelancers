@@ -7,9 +7,15 @@ import ListaAnuncios from 'pages/PubliqueAnuncios';
 import ListaVagas from 'pages/PubliqueVagas';
 import Login from 'pages/Login';
 import MeuPerfil from 'pages/Perfil';
+import { AuthProvider } from './context/AuthProvider'
+import { ProtectedLayout } from './components/ProtectedLayout'
+import { Login2 } from './components/Login2'
+import NavBar from "components/NavBar";
+import Footer from "components/Footer";
 
 const Routes = () => {
     return (
+		<AuthProvider>
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact>
@@ -36,8 +42,19 @@ const Routes = () => {
                 <Route path="/meu-perfil">
                     <MeuPerfil />
                 </Route>
+				<Route path='/profile'>
+					<ProtectedLayout>
+						<h2>Olá esse é o componente profile</h2>
+					</ProtectedLayout>
+				</Route>
+				<Route path='/login2'>
+					<NavBar />
+					<Login2 />
+					<Footer />
+				</Route>
             </Switch>
         </BrowserRouter>
+		</AuthProvider>
     );
 }
 
