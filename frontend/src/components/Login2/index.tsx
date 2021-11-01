@@ -3,7 +3,7 @@ import { Button, Col, Form, Input, message, Row } from "antd";
 import { useAuth } from "../../context/AuthProvider/useAuth";
 import { useHistory } from "react-router";
 
-export const Login2 = () => {
+export const FormLogin = () => {
 	
 	const auth = useAuth();
 	const hitory = useHistory();
@@ -23,6 +23,10 @@ export const Login2 = () => {
 		align='middle'
 		style={{
 			height: '100vh',
+			textAlign: 'center',
+			paddingTop: '30px',	
+			marginLeft: '10%',
+			marginRight: '10%',
 		}}
 	  >
 	  <Col span={12}>
@@ -31,10 +35,16 @@ export const Login2 = () => {
 		  labelCol={{span: 8}}
 		  wrapperCol={{span: 16}}
 		  onFinish={onFinish}
+		  style={{
+			  backgroundColor: 'rgba(255,255,255,0.5)',
+		  }}
 		>
 		  <Form.Item
 		    label='Email'
 			name='email'
+			style={{
+				paddingBottom: '30px',	
+			}}
 		  >
 		    <Input />
 		  </Form.Item>
@@ -42,18 +52,36 @@ export const Login2 = () => {
 		  <Form.Item
 		    label='Password'
 			name='password'
+			style={{
+				paddingBottom: '30px',	
+			}}
 		  >
 		    <Input.Password />
 		  </Form.Item>
 		  
 		  <Form.Item wrapperCol={{offset: 8, span: 16}}>
-		    <Button type='primary' htmlType='submit'>
-			  Sign In
+		    <Button 
+				type='primary'
+				htmlType='submit'
+				style={{
+					background: '#003CBA',
+					border: '3px solid #555555',
+					color: 'white',
+					padding: '14px 40px',
+					textAlign: 'center',
+					display: 'inline-block',
+					fontSize: '16px',
+					borderRadius: '12px',
+					marginLeft: '20px',
+				}}			
+			>
+			  Entrar
 			</Button>
-		  
 		  </Form.Item>
 		</Form>
 	  </Col>	    
 	  </Row>
 	);
 };
+
+export default FormLogin;

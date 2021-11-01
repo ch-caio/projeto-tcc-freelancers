@@ -9,7 +9,6 @@ import Login from 'pages/Login';
 import MeuPerfil from 'pages/Perfil';
 import { AuthProvider } from './context/AuthProvider'
 import { ProtectedLayout } from './components/ProtectedLayout'
-import { Login2 } from './components/Login2'
 import NavBar from "components/NavBar";
 import Footer from "components/Footer";
 
@@ -46,11 +45,6 @@ const Routes = () => {
 					<ProtectedLayout>
 						<h2>Olá esse é o componente profile</h2>
 					</ProtectedLayout>
-				</Route>
-				<Route path='/login2'>
-					<NavBar />
-					<Login2 />
-					<Footer />
 				</Route>
             </Switch>
         </BrowserRouter>
