@@ -1,0 +1,33 @@
+.conteudo{
+    /*Novamente definimos a largura da div*/
+    width:100%;
+    /* altura da div */
+    height:500px;
+    padding: auto;
+}
+
+.esquerda{
+    /*largura*/
+    width:50%;
+    /*altura*/
+    height:500px;
+    float:left;
+    padding-left: 15%;
+    padding-top: 10px;
+}
+
+.direita{
+    /*largura*/
+    width:50%;
+    /*altura*/
+    height:500px;
+    float:left;
+    padding-left: 10%;
+    padding-top: 10px;
+    background-color: F8F8FF;
+}
+
+.conteudo input {
+    width: 300px;
+}
+  
