@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from "utils/requests";
 
 const AdicionarProcura = () => {
 
@@ -11,7 +12,7 @@ const AdicionarProcura = () => {
     event.preventDefault();
     const user = { area, descricao, email };
 
-    axios.post(`http://localhost:8080/procuras`, user)
+    axios.post(`${BASE_URL}/procuras`, user)
       .then(res => {
         console.log(res);
         console.log(res.data);

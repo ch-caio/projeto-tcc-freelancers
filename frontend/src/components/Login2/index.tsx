@@ -21,7 +21,7 @@ export const FormLogin = () => {
 	return (
 		<>
 			<div className="conteudo">
-				<div className="esquerda">
+				<div className="esquerdaLogin">
 					<div className="container">
 						<h1>Criar conta</h1>
 						<form>
@@ -40,7 +40,7 @@ export const FormLogin = () => {
 
 				</div>
 
-				<div className="direita">
+				<div className="direitaLogin">
 					<div className="container">
 						<h1>Login</h1>
 						<Form
