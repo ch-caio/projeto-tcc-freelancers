@@ -7,7 +7,7 @@ const Colunas2 = () => {
     return (
 
         <div className="row">
-            <div className="coluna direita" >
+            <div className="coluna right" >
                 <h2>
                     Pesquisando por vagas?
                 </h2>
@@ -18,7 +18,7 @@ const Colunas2 = () => {
                     <button className="btn1">Pesquise!</button>
                 </Link>
             </div>
-			<div className="coluna esquerda" >
+			<div className="coluna" >
                 <img src={lupa}></img>
             </div>
         </div >

@@ -7,11 +7,11 @@ const Colunas = () => {
     return (
 
         <div className="row">
-            <div className="coluna esquerda" >
+            <div className="coluna" >
                 <img src={user}></img>
             </div>
 
-            <div className="coluna direita" >
+            <div className="coluna right" >
                 <h2>
                     Procurando por profissionais?
                 </h2>
