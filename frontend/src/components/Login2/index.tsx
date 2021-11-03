@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Form, Input, message, Row, Space } from "antd";
+import { Button, Col, Form, Input, message, Row } from "antd";
 import { useAuth } from "../../context/AuthProvider/useAuth";
 import { useHistory } from "react-router";
 import "components/Login2/style.css"
@@ -21,7 +21,7 @@ export const FormLogin = () => {
 	return (
 		<>
 			<div className="conteudo">
-				<div className="esquerda">
+				<div className="esquerdaLogin">
 					<div className="container">
 						<h1>Criar conta</h1>
 						<form>
@@ -37,11 +37,13 @@ export const FormLogin = () => {
 							<button type="submit" className="btn btn-primary">Criar conta</button>
 						</form>
 					</div>
+
 				</div>
-				<div className="direita">
+
+				<div className="direitaLogin">
 					<div className="container">
 						<h1>Login</h1>
-						<Form 
+						<Form
 							name='basic'
 							labelCol={{ span: 8 }}
 							wrapperCol={{ span: 16 }}
@@ -58,7 +60,6 @@ export const FormLogin = () => {
 								}}
 							>
 								<Input
-									placeholder="exemplo: usuario@gmail.com"
 									style={{
 										display: "block",
 										width: '300px',
@@ -75,29 +76,26 @@ export const FormLogin = () => {
 							</Form.Item>
 
 							<Form.Item
-								label='Senha'
+								label='Password'
 								name='password'
 								style={{
 									paddingBottom: '30px',
 								}}
 							>
-								<Space direction="vertical">
-									<Input.Password
-										placeholder="exe adm.123"
-										style={{
-											display: "block",
-											width: '343px',
-											padding: '0.375rem 0.75rem',
-											fontSize: '1rem',
-											lineHeight: '1.5',
-											color: '#212529',
-											backgroundColor: '#c2eefffd',
-											border: '1px solid #ced4da',
-											appearance: 'none',
-											borderRadius: '0.25rem',
-											transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out',
-										}} />
-									</Space>
+								<Input
+									style={{
+										display: "block",
+										width: '300px',
+										padding: '0.375rem 0.75rem',
+										fontSize: '1rem',
+										lineHeight: '1.5',
+										color: '#212529',
+										backgroundColor: '#c2eefffd',
+										border: '1px solid #ced4da',
+										appearance: 'none',
+										borderRadius: '0.25rem',
+										transition: 'border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out',
+									}} />
 							</Form.Item>
 
 							<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
@@ -124,6 +122,7 @@ export const FormLogin = () => {
 						</Form>
 					</div>
 				</div>
+
 			</div>
 		</>
 	);

@@ -1,4 +1,5 @@
 import Contrate from 'pages/Contrate';
+import EditarProcura from 'pages/EditarProcura';
 import Home from 'pages/Home';
 import Publique from 'pages/Publique';
 import SobreNos from 'pages/PaginaSobreNos';
