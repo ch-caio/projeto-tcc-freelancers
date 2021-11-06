@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+
+    function newPopup() {
+
+        window.open(
+            '/termos',
+            'pagina',
+            "width=350, height=255, top=100, left=110, scrollbars=no "
+
+        );
+    }
+
     return (
         <div className="container">
             <footer className="py-3 my-4">
@@ -16,12 +27,17 @@ const Footer = () => {
 
                     <Link className="nav-item" to="/sobre-nos"><li className="nav-item">
                         <span className="nav-link px-2 text-muted">Sobre nós</span></li></Link>
+                    <Link className="nav-item" to="">
+                        <li className="nav-item">
+                            <span onClick={() => newPopup()} className="nav-link px-2 text-muted" >Pagina de termos</span></li></Link>
                 </ul>
                 <p className="text-center text-muted">©Freelancers</p>
             </footer>
-        </div>
+        </div >
     );
 }
 
 export default Footer;
 
+
+// target='_blank'
