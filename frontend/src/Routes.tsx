@@ -1,5 +1,4 @@
 import Contrate from 'pages/Contrate';
-import EditarProcura from 'pages/EditarProcura';
 import Home from 'pages/Home';
 import Publique from 'pages/Publique';
 import SobreNos from 'pages/PaginaSobreNos';
@@ -10,6 +9,7 @@ import Login from 'pages/Login';
 import MeuPerfil from 'pages/Perfil';
 import { AuthProvider } from './context/AuthProvider'
 import { ProtectedLayout } from './components/ProtectedLayout'
+import Termos from './pages/Termos'
 
 
 const Routes = () => {
@@ -46,6 +46,9 @@ const Routes = () => {
                             <MeuPerfil />
                         </ProtectedLayout>
                     </Route>
+                    <Route path='/termos'>
+                        <Termos />
+                    </Route>
                 </Switch>
             </BrowserRouter>
         </AuthProvider>
@@ -53,3 +56,5 @@ const Routes = () => {
 }
 
 export default Routes;
+
+// handler={window}
