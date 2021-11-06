@@ -3,11 +3,33 @@ import { Button, Col, Form, Input, message, Row } from "antd";
 import { useAuth } from "../../context/AuthProvider/useAuth";
 import { useHistory } from "react-router";
 import "components/Login2/style.css"
+import { Link } from "react-router-dom";
 
 export const FormLogin = () => {
 
 	const auth = useAuth();
 	const hitory = useHistory();
+
+	function newPopupTermos() {
+
+        window.open(
+            '/termos',
+            'pagina',
+            "width=570, height=500, top=100, left=390, scrollbars=no "
+
+        );
+    }
+	
+	function newPopupPolitica() {
+
+        window.open(
+            '/politica',
+            'pagina',
+            "width=570, height=500, top=100, left=390, scrollbars=no "
+
+        );
+    }
+
 
 	async function onFinish(values: { email: string, password: string }) {
 		try {
@@ -17,6 +39,20 @@ export const FormLogin = () => {
 			message.error('Invalid email or password');
 		}
 	}
+	
+	function checkAceito() {/*
+		//var ch = document.getElementById('check');
+		var btn = document.getElementById('btnC');
+		var element = <HTMLInputElement> document.getElementById("check");
+		var isChecked = element.checked;
+		if (isChecked) {
+			btn.disabled = false
+		}; else {
+			btn.disabled = true
+		};*/
+		
+	}
+	
 
 	return (
 		<>
@@ -34,12 +70,26 @@ export const FormLogin = () => {
 								<label htmlFor="exampleInputPassword1" className="form-label">Senha</label>
 								<input type="password" className="form-control" id="exampleInputPassword1" />
 							</div>
-							<button type="submit" className="btn btn-primary">Criar conta</button>
+							<Link className="nav-item" to="/login">
+								<li className="nav-item">
+									<span onClick={() => newPopupTermos()} className="nav-link px-2 text-muted" >Termos de uso</span>
+								</li>
+							</Link>					
+							<Link className="nav-item" to="/login">
+								<li className="nav-item">
+									<span onClick={() => newPopupPolitica()} className="nav-link px-2 text-muted" >Politica de privacidade</span>
+								</li>
+							</Link>
+							<li>
+								<input type="checkbox" id="check" name="aceita" value="aceita" onClick="checkAceito()" checked="false"></input>
+								<label htmlFor="check">Li e aceito os termos de uso e a politica de privacidade</label>
+							</li>
+							<p>
+								<button type="submit" className="btn btn-primary" id="btnC" disabled='disabled'>Criar conta</button>
+							</p>
 						</form>
 					</div>
-
 				</div>
-
 				<div className="direitaLogin">
 					<div className="container">
 						<h1>Login</h1>
@@ -129,3 +179,5 @@ export const FormLogin = () => {
 };
 
 export default FormLogin;
+	
+	

@@ -1,9 +1,9 @@
-const Termos = () => {
+import Termos from "components/Termos"
+
+const PageTermos = () => {
     return (
-        <>
-            <h1>Pagina de termos</h1>
-        </>
+        <Termos/>
     );
 }
 
-export default Termos;
+export default PageTermos;

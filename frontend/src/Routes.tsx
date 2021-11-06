@@ -10,7 +10,7 @@ import MeuPerfil from 'pages/Perfil';
 import { AuthProvider } from './context/AuthProvider'
 import { ProtectedLayout } from './components/ProtectedLayout'
 import Termos from './pages/Termos'
-
+import PagePolitica from './pages/Politica'
 
 const Routes = () => {
     return (
@@ -49,6 +49,9 @@ const Routes = () => {
                     <Route path='/termos'>
                         <Termos />
                     </Route>
+					<Route path='/politica'>
+						<PagePolitica />
+					</Route>
                 </Switch>
             </BrowserRouter>
         </AuthProvider>
