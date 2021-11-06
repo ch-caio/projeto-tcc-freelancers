@@ -3,7 +3,7 @@ import AdicionarUsuario from "components/AdicionarUsuario";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 
-const ListaAnuncios = () => {
+const AddAnuncios = () => {
     return (
         <>
             <NavBar />
@@ -15,4 +15,4 @@ const ListaAnuncios = () => {
     );
 }
 
-export default ListaAnuncios;
+export default AddAnuncios;

@@ -76,7 +76,7 @@ const MeuPerfil = () => {
                                 <td>{item.area}</td>
                                 <td><button onClick={() => deletePostProcuras(item.id)}>Excluir</button>
                                     <Link className="nav-item" to={{ pathname: `/procuras/editar/${item.id}` }}>
-                                        <button >Editar</button></Link></td>
+                                        <button>Editar</button></Link></td>
                             </tr>
                         ))}
                     </tbody>

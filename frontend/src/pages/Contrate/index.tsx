@@ -2,7 +2,7 @@ import DataTableUsuario from "components/DataTableUsuario";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 
-const Contrate = () => {
+const ListaContrate = () => {
     return (
         <>
             <NavBar />
@@ -14,4 +14,4 @@ const Contrate = () => {
     );
 }
 
-export default Contrate;
+export default ListaContrate;

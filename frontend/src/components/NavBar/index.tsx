@@ -10,11 +10,11 @@ const NavBar = () => {
 
             <div className="gradelinks">
                 <ul>
-                    <Link className="nav-item" to="/lista-vagas"><li className="nav-item">
-                        <span className="nav-link px-2 text-muted">Publique sua vaga</span></li></Link>
+                    <Link className="nav-item" to="/publique"><li className="nav-item">
+                        <span className="nav-link px-2 text-muted">Lista Vagas</span></li></Link>
 
-                    <Link className="nav-item" to="/lista-anuncios"><li className="nav-item">
-                        <span className="nav-link px-2 text-muted">Publique seu perfil</span></li></Link>
+                    <Link className="nav-item" to="/contrate"><li className="nav-item">
+                        <span className="nav-link px-2 text-muted">Lista Freelancers</span></li></Link>
 
                     <Link className="nav-item" to="/login"><li className="nav-item">
                         <span className="nav-link px-2 text-muted">Login</span></li></Link>

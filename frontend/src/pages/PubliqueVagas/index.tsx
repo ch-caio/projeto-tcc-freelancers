@@ -2,7 +2,7 @@ import AdicionarProcura from "components/AdicionarProcura";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 
-const ListaVagas = () => {
+const AddVagas = () => {
     return (
         <>
             <NavBar />
@@ -14,4 +14,4 @@ const ListaVagas = () => {
     );
 }
 
-export default ListaVagas;
+export default AddVagas;

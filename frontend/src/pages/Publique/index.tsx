@@ -2,7 +2,7 @@ import DataTableProcura from "components/DataTableProcura";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 
-const Publique = () => {
+const ListaPublique = () => {
     return (
         <>
             <NavBar />
@@ -14,4 +14,4 @@ const Publique = () => {
     );
 }
 
-export default Publique;
+export default ListaPublique;
