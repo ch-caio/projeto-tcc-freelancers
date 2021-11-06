@@ -43,7 +43,7 @@ const Routes = () => {
                     </Route>
                     <Route path='/profile'>
                         <ProtectedLayout>
-                            <h2>Olá esse é o componente profile</h2>
+                            <MeuPerfil />
                         </ProtectedLayout>
                     </Route>
                 </Switch>

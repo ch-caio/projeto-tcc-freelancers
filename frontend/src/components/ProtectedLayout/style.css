@@ -2,12 +2,37 @@
     text-align: center;
 }
 img.imgMeio {
-    height: 700px;
-	padding-left: 19%;
-    padding-right: 19%;
+    height: 400px;
+}
+
+a.linkMeio {
+	margin-left: 19%;
+	margin-right: 19%;
 }
 
 .proibeText {
     text-align: center;
 }
+.proibeText ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin-top: 1%;
+}
 
+
+.btn {
+  background-color: #003CBA;
+  border: 3px solid #555555;
+  color: white;
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  margin-top: 1%;
+}
+.btn:hover {
+  background-color: #006CBA;
+  color: white;
+}
