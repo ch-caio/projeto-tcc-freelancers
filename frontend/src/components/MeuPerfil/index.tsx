@@ -75,12 +75,16 @@ const MeuPerfil = () => {
                                 <td>{item.email}</td>
                                 <td>{item.area}</td>
                                 <td><button onClick={() => deletePostProcuras(item.id)}>Excluir</button>
-                                    <Link className="nav-item" to={{ pathname: `/procuras/editar/${item.id}` }}>
-                                        <button>Editar</button></Link></td>
+									<Link className="nav-item" to={{ pathname: `/procuras/editar/${item.id}` }}>
+                                        <button>Editar</button>
+									</Link>
+								</td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
+				<Link className="nav-item" to='/publica-anuncios'>
+                    <button>Adicionar Vaga</button></Link>
             </div>
 
             <h5>Perfis</h5>
@@ -108,6 +112,8 @@ const MeuPerfil = () => {
                         ))}
                     </tbody>
                 </table>
+				<Link className="nav-item" to='/publica-vagas'>
+                    <button>Adicionar Perfil</button></Link>
             </div>
 
         </>

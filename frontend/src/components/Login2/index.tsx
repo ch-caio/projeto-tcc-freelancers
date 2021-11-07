@@ -40,7 +40,7 @@ export const FormLogin = () => {
 		}
 	}
 	
-	function checkAceito() {/*
+	/*function checkAceito() {
 		//var ch = document.getElementById('check');
 		var btn = document.getElementById('btnC');
 		var element = <HTMLInputElement> document.getElementById("check");
@@ -49,9 +49,9 @@ export const FormLogin = () => {
 			btn.disabled = false
 		}; else {
 			btn.disabled = true
-		};*/
+		};
 		
-	}
+	}*/
 	
 
 	return (
@@ -81,11 +81,11 @@ export const FormLogin = () => {
 								</li>
 							</Link>
 							<li>
-								<input type="checkbox" id="check" name="aceita" value="aceita" onClick="checkAceito()" checked="false"></input>
+								<input type="checkbox" id="check" name="aceita" value="aceita"></input>
 								<label htmlFor="check">Li e aceito os termos de uso e a politica de privacidade</label>
 							</li>
 							<p>
-								<button type="submit" className="btn btn-primary" id="btnC" disabled='disabled'>Criar conta</button>
+								<button type="submit" className="btn btn-primary" id="btnC">Criar conta</button>
 							</p>
 						</form>
 					</div>

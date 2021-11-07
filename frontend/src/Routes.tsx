@@ -29,10 +29,10 @@ const Routes = () => {
                     <Route path="/sobre-nos" >
                         <SobreNos />
                     </Route>
-                    <Route path="/lista-anuncios" >
+                    <Route path="/publica-anuncios" >
                         <ListaAnuncios />
                     </Route>
-                    <Route path="/lista-vagas" >
+                    <Route path="/publica-vagas" >
                         <ListaVagas />
                     </Route>
                     <Route path="/login">

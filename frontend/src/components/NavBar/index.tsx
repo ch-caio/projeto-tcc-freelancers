@@ -16,14 +16,15 @@ const NavBar = () => {
                     <Link className="nav-item" to="/contrate"><li className="nav-item">
                         <span className="nav-link px-2 text-muted">Lista Freelancers</span></li></Link>
 
-                    <Link className="nav-item" to="/login"><li className="nav-item">
-                        <span className="nav-link px-2 text-muted">Login</span></li></Link>
-
-                    <Link className="nav-item" to="/perfil"><li className="nav-item">
-                        <span className="nav-link px-2 text-muted">Meu perfil</span></li></Link>
-
                     <Link className="nav-item" to="/sobre-nos"><li className="nav-item">
                         <span className="nav-link px-2 text-muted">Sobre nós</span></li></Link>
+						
+					
+                    <Link className="nav-item" to="/perfil"><li className="nav-item">
+                        <span className="nav-link px-2 text-muted">Meu perfil</span></li></Link>
+					
+					<Link className="nav-item" to="/login"><li className="nav-item">
+                        <span className="nav-link px-2 text-muted">Login</span></li></Link>
                 </ul>
             </div >
         </div >

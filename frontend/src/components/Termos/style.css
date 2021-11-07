@@ -3,12 +3,12 @@
 	margin: 7%;
 }
 
-h1 {
+.content h1 {
     text-align: center;
     margin-bottom: 5%;
 }
 
-h2 {
+.content h2 {
     margin-top: 5%;
     margin-bottom: 5%;
 }
