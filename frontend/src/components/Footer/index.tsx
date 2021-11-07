@@ -7,6 +7,7 @@ const Footer = () => {
         window.open(
             '/termos',
             'pagina',
+<<<<<<< Updated upstream
             "width=570, height=500, top=100, left=390, scrollbars=no "
 
         );
@@ -19,6 +20,9 @@ const Footer = () => {
             'pagina',
             "width=570, height=500, top=100, left=390, scrollbars=no "
 
+=======
+            "width=350, height=255, top=100, left=110, scrollbars=no "
+>>>>>>> Stashed changes
         );
     }
 
