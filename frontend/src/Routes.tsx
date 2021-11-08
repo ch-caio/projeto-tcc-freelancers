@@ -30,16 +30,22 @@ const Routes = () => {
                         <SobreNos />
                     </Route>
                     <Route path="/publica-anuncios" >
-                        <ListaAnuncios />
+						<ProtectedLayout>
+							<ListaAnuncios />
+						</ProtectedLayout>
                     </Route>
                     <Route path="/publica-vagas" >
-                        <ListaVagas />
+						<ProtectedLayout>
+							<ListaVagas />
+						</ProtectedLayout>
                     </Route>
                     <Route path="/login">
                         <Login />
                     </Route>
                     <Route path="/perfil">
-                        <MeuPerfil />
+						<ProtectedLayout>
+							<MeuPerfil />
+						</ProtectedLayout>
                     </Route>
                     <Route path='/profile'>
                         <ProtectedLayout>
