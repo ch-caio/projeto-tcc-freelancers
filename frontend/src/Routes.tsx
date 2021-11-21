@@ -2,68 +2,84 @@ import Contrate from 'pages/Contrate';
 import Home from 'pages/Home';
 import Publique from 'pages/Publique';
 import SobreNos from 'pages/PaginaSobreNos';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import ListaAnuncios from 'pages/PubliqueAnuncios';
-import ListaVagas from 'pages/PubliqueVagas';
-import Login from 'pages/Login';
-import MeuPerfil from 'pages/Perfil';
-import { AuthProvider } from './context/AuthProvider'
-import { ProtectedLayout } from './components/ProtectedLayout'
 import Termos from './pages/Termos'
 import PagePolitica from './pages/Politica'
+import EditarProcura from './pages/EditarProcura/Edit';
+import Login from './pages/Login/index'
 
-const Routes = () => {
+import { AuthProvider } from 'context/AuthProvider';
+import { ProtectedLayout } from 'components/ProtectedLayout';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Perfil from 'pages/Perfil';
+
+
+
+function Routes() {
     return (
-        <AuthProvider>
-            <BrowserRouter>
-                <Switch>
-                    <Route path="/" exact>
-                        <Home />
-                    </Route>
-                    <Route path="/publique">
-                        <Publique />
-                    </Route>
-                    <Route path="/contrate" >
-                        <Contrate />
-                    </Route>
-                    <Route path="/sobre-nos" >
-                        <SobreNos />
-                    </Route>
-                    <Route path="/publica-anuncios" >
-						<ProtectedLayout>
-							<ListaAnuncios />
-						</ProtectedLayout>
-                    </Route>
-                    <Route path="/publica-vagas" >
-						<ProtectedLayout>
-							<ListaVagas />
-						</ProtectedLayout>
-                    </Route>
-                    <Route path="/login">
-                        <Login />
-                    </Route>
-                    <Route path="/perfil">
-						<ProtectedLayout>
-							<MeuPerfil />
-						</ProtectedLayout>
-                    </Route>
-                    <Route path='/profile'>
-                        <ProtectedLayout>
-                            <MeuPerfil />
-                        </ProtectedLayout>
-                    </Route>
-                    <Route path='/termos'>
-                        <Termos />
-                    </Route>
-					<Route path='/politica'>
-						<PagePolitica />
-					</Route>
-                </Switch>
-            </BrowserRouter>
-        </AuthProvider>
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" exact>
+                    <Home />
+                </Route>
+                <Route path="/publique">
+                    <Publique />
+                </Route>
+                <Route path="/contrate" >
+                    <Contrate />
+                </Route>
+                <Route path="/sobre-nos" >
+                    <SobreNos />
+                </Route>
+                <Route path='/termos'>
+                    <Termos />
+                </Route>
+                <Route path='/politica'>
+                    <PagePolitica />
+                </Route>
+                <Route path='/EditProcura/:id'>
+                    <EditarProcura />
+                </Route>
+
+                {/* partes protegidas abaixo e tela de login*/}
+
+                <AuthProvider>
+                    <BrowserRouter>
+                        <Switch>
+                            <Route path='/perfil'>
+                                <ProtectedLayout>
+                                    <Perfil />
+                                </ProtectedLayout>
+                            </Route>
+
+                            <Route path='/login'>
+                                <Login />
+                            </Route>
+                        </Switch>
+                    </BrowserRouter>
+                </AuthProvider>
+            </Switch>
+        </BrowserRouter>
     );
 }
 
 export default Routes;
 
-// handler={window}
+/*
+<AuthProvider>
+            <BrowserRouter>
+                <Switch>
+                    <Route path='/perfil'>
+                        <ProtectedLayout>
+                            <h2>componente perfil</h2>
+                        </ProtectedLayout>
+                    </Route>
+
+                    <Route path='/login'>
+                        <ProtectedLayout>
+                            <h2>componente login</h2>
+                        </ProtectedLayout>
+                    </Route>
+                </Switch>
+            </BrowserRouter>
+        </AuthProvider>
+*/

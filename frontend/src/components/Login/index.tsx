@@ -1,31 +1,59 @@
+import { Button, Col, Form, Row, Input, message } from "antd";
+import React from "react";
+import { useAuth } from "../../context/AuthProvider/useAuth";
+import { useHistory } from "react-router";
+import "antd/dist/antd.css"
 
-import { Link } from 'react-router-dom';
+export const login = () => {
 
-const Login = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const auth = useAuth();
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const history = useHistory();
+
+    async function onFinish(values: { email: string, password: string }) {
+        try {
+            await auth.authenticate(values.email, values.password);
+            history.push('/pefil');
+
+        } catch (error) {
+            message.error('senha ou email invalido')
+        }
+    }
+
     return (
-        <div className="container">
-            <form>
-                <div className="mb-3">
-                    <label className="form-label">Endereço de Email</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                </div>
-                <div className="mb-3">
-                    <label className="form-label">Senha</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" />
-                </div>
-                <div className="mb-3 form-check">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" >Lembrar senha</label>
-                </div>
-                <div className="d-grid gap-5 d-md-block">
-                    <button type="button" className="btn btn-primary btn-lg">Criar conta</button>
-                    <br />
-                    <br />
-                    <Link className="nav-item" to="/meu-perfil">
-                        <button type="button" className="btn btn-primary btn-lg">Entrar</button></Link>
-                </div>
-            </form >
-        </div >
+        <Row
+            justify='center'
+            align='middle'
+            style={{ height: '100vh' }}
+        >
+            <Col span={12}>
+                <Form
+                    name='basic'
+                    onFinish={onFinish}
+                >
+                    <Form.Item
+                        label='Email'
+                        name='email'
+                    >
+                        <Input />
+                    </Form.Item>
+
+                    <Form.Item
+                        label='Password'
+                        name='password'
+                    >
+                        <Input.Password />
+                    </Form.Item>
+
+                    <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                        <Button type='primary' htmlType="submit">Entar</Button>
+                    </Form.Item>
+
+                </Form>
+            </Col>
+        </Row>
     );
 }
-export default Login;
+
+export default login;

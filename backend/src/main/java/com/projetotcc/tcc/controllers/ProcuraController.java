@@ -1,27 +1,20 @@
 package com.projetotcc.tcc.controllers;
 
-import java.net.URI;
-import java.util.List;
-import java.util.stream.Collectors;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.projetotcc.tcc.dto.ProcuraDTO;
+import com.projetotcc.tcc.entities.Procura;
+import com.projetotcc.tcc.service.ProcuraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.projetotcc.tcc.dto.ProcuraDTO;
-import com.projetotcc.tcc.entities.Procura;
-import com.projetotcc.tcc.service.ProcuraService;
+import java.net.URI;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/procuras")
@@ -29,6 +22,12 @@ public class ProcuraController {
 
 	@Autowired
 	private ProcuraService service;
+
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Procura> findById (@PathVariable Long id) {
+		Procura procura = service.findById(id);
+		return ResponseEntity.ok().body(procura);
+	}
 
 	@JsonIgnore
 	@GetMapping()
@@ -43,7 +42,7 @@ public class ProcuraController {
 				.map(this::toModelProcuraDTO)
 				.collect(Collectors.toList());
 	}
-	
+
 	private ProcuraDTO toModelProcuraDTO(Procura procura) {
 		return new ProcuraDTO(procura);
 	}
@@ -61,5 +60,11 @@ public class ProcuraController {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
-}
+
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<Procura> atualizar(@PathVariable Long id, @RequestBody Procura procura) {
+		procura = service.atualizar(id, procura);
+		return ResponseEntity.ok().body(procura);
+	}
+ }
 

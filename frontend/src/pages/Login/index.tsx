@@ -1,14 +1,14 @@
-
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
+import FormLogin from "components/Login"
 
-import FormLogin from "components/Login2"
-
-const Login = () => {
+function Login() {
     return (
         <>
             <NavBar />
-            <FormLogin />
+            <div className="container">
+                <FormLogin />
+            </div>
             <Footer />
         </>
     );
