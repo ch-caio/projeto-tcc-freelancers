@@ -61,7 +61,7 @@ public class ProcuraController {
 		return ResponseEntity.noContent().build();
 	}
 
-	@PutMapping(value = "/{id}")
+	@PutMapping(value = "/editar/{id}")
 	public ResponseEntity<Procura> atualizar(@PathVariable Long id, @RequestBody Procura procura) {
 		procura = service.atualizar(id, procura);
 		return ResponseEntity.ok().body(procura);

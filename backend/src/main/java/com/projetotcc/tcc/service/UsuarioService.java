@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 @Service
 public class UsuarioService {
 
@@ -46,5 +48,10 @@ public class UsuarioService {
         entity.setDescricao(obj.getDescricao());
         entity.setEmail(obj.getEmail());
         entity.setNome(obj.getNome());
+    }
+
+    public Usuario findById(Long usuarioId) {
+        Optional<Usuario> usuario = usuarioRepository.findById(usuarioId);
+        return usuario.get();
     }
 }

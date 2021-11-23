@@ -1,23 +1,22 @@
 import { Button, Col, Form, Row, Input, message } from "antd";
-import React from "react";
-import { useAuth } from "../../context/AuthProvider/useAuth";
-import { useHistory } from "react-router";
 import "antd/dist/antd.css"
+import { useAuth } from "context/AuthProvider/useAuth";
+import { useHistory } from "react-router-dom";
 
-export const login = () => {
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const auth = useAuth();
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const history = useHistory();
+
+export const Login = () => {
+
+    const auth = useAuth()
+    const history = useHistory()
 
     async function onFinish(values: { email: string, password: string }) {
         try {
             await auth.authenticate(values.email, values.password);
-            history.push('/pefil');
+            history.push("/perfil");
 
         } catch (error) {
-            message.error('senha ou email invalido')
+            message.error('Email ou senha incorreto')
         }
     }
 
@@ -30,6 +29,8 @@ export const login = () => {
             <Col span={12}>
                 <Form
                     name='basic'
+                    labelCol={{ span: 8 }}
+                    wrapperCol={{ span: 16 }}
                     onFinish={onFinish}
                 >
                     <Form.Item
@@ -56,4 +57,4 @@ export const login = () => {
     );
 }
 
-export default login;
+export default Login;

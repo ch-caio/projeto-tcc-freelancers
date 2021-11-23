@@ -22,5 +22,3 @@ export async function LoginRequest(email: string, password: string) {
 		return null;
 	}
 }
-
-//../../service/api

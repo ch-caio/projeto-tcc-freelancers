@@ -23,5 +23,11 @@
   },
   "include": [
     "src"
+  ],
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://cors.api.com/api"
+    }
   ]
 }

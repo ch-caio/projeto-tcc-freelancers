@@ -6,6 +6,9 @@ import Termos from './pages/Termos'
 import PagePolitica from './pages/Politica'
 import EditarProcura from './pages/EditarProcura/Edit';
 import Login from './pages/Login/index'
+import PubliqueAnuncios from './pages/PubliqueAnuncios'
+import PubliqueVagas from './pages/PubliqueVagas'
+import CriarConta from './pages/CriarConta'
 
 import { AuthProvider } from 'context/AuthProvider';
 import { ProtectedLayout } from 'components/ProtectedLayout';
@@ -39,6 +42,19 @@ function Routes() {
                 <Route path='/EditProcura/:id'>
                     <EditarProcura />
                 </Route>
+                <Route path="/publica-vagas">
+                    <PubliqueVagas />
+                </Route>
+                <Route path="/publica-anuncios">
+                    <PubliqueAnuncios />
+                </Route>
+                <Route path='/login'>
+                    <Login />
+                </Route>
+                <Route path='/criar-conta'>
+                    <CriarConta />
+                </Route>
+
 
                 {/* partes protegidas abaixo e tela de login*/}
 
@@ -50,10 +66,6 @@ function Routes() {
                                     <Perfil />
                                 </ProtectedLayout>
                             </Route>
-
-                            <Route path='/login'>
-                                <Login />
-                            </Route>
                         </Switch>
                     </BrowserRouter>
                 </AuthProvider>
@@ -63,23 +75,3 @@ function Routes() {
 }
 
 export default Routes;
-
-/*
-<AuthProvider>
-            <BrowserRouter>
-                <Switch>
-                    <Route path='/perfil'>
-                        <ProtectedLayout>
-                            <h2>componente perfil</h2>
-                        </ProtectedLayout>
-                    </Route>
-
-                    <Route path='/login'>
-                        <ProtectedLayout>
-                            <h2>componente login</h2>
-                        </ProtectedLayout>
-                    </Route>
-                </Switch>
-            </BrowserRouter>
-        </AuthProvider>
-*/

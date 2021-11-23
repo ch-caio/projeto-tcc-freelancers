@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ProcurasPage } from "types/procuras";
 import { UsuariosPage } from "types/usuarios";
 import { BASE_URL } from "utils/requests";
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "components/MeuPerfil/style.css"
 
 

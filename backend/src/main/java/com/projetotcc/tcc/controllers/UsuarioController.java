@@ -3,6 +3,7 @@ package com.projetotcc.tcc.controllers;
 import java.net.URI;
 
 import Request.AtualizarUsuario;
+import com.projetotcc.tcc.entities.Procura;
 import com.projetotcc.tcc.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -31,6 +32,12 @@ public class UsuarioController {
 		return ResponseEntity.ok(lista);
 	}
 
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Usuario> findById (@PathVariable Long id) {
+		Usuario usuario = service.findById(id);
+		return ResponseEntity.ok().body(usuario);
+	}
+
 	@PostMapping
 	public ResponseEntity<Usuario> insert(@RequestBody Usuario usuario) {
 		usuario = service.insert(usuario);
@@ -45,7 +52,7 @@ public class UsuarioController {
 		return ResponseEntity.noContent().build();
 	}
 
-	@PutMapping(value = "/{id}")
+	@PutMapping(value = "/editar/{id}")
 	public ResponseEntity<Usuario> editar (@PathVariable Long id, @RequestBody Usuario usuario) {
 		usuario = service.update(id, usuario);
 		return ResponseEntity.ok().body(usuario);
